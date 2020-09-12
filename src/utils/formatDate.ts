@@ -1,8 +1,4 @@
 const formatDate = (date: Date): string =>
-  `${new Date(date).getDate()}/${
-    new Date(date).getUTCMonth() + 1 < 10
-      ? `0${new Date(date).getUTCMonth()}`
-      : new Date(date).getUTCMonth()
-  }/${new Date(date).getUTCFullYear()}`;
+  new Date(date).toLocaleDateString('pt-br');
 
 export default formatDate;
